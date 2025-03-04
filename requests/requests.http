@@ -1,0 +1,53 @@
+###
+@url=http://localhost:8080
+@game_id=b5daf912-34eb-4f2b-9109-33af159cd8c6
+@player_id=9f65e646-4607-4998-aee2-8ffb8931ea02
+@token=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2UiLCJpYXQiOjE3NDEwOTMyNTIsImV4cCI6MTc0MTA5Njg1Mn0.IMnh3SKN6-l2lO8UtiRSFjaiput3CINlHacv_huCUm4
+
+
+### POST auth signup
+POST {{url}}/auth/signup
+Content-Type: application/json
+
+{
+  "username": "alex",
+  "password": "yoyoyo"
+}
+
+### POST auth login
+POST {{url}}/auth/login
+Content-Type: application/json
+
+
+{
+  "username": "joe",
+  "password": "yoyoyo"
+}
+
+### GET test first
+GET {{url}}/test/first
+Authorization: {{token}}
+
+### GET test user
+GET {{url}}/test/user
+Authorization: {{token}}
+
+### GET test admin
+GET {{url}}/test/admin
+Authorization: {{token}}
+
+### GET test user verified
+GET {{url}}/test/user/verified
+Authorization: {{token}}
+
+### GET test admin
+GET {{url}}/test/admin
+Authorization: {{token}}
+
+### GET user list
+GET {{url}}/users/list
+Authorization: {{token}}
+
+### DELETE user
+DELETE {{url}}/users/user
+Authorization: {{token}}
