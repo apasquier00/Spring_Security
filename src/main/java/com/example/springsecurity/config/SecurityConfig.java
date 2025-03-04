@@ -90,18 +90,18 @@ public class SecurityConfig {
 //    @Bean
 //    public static UserDetailsService userDetailsService() {
 //        InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
-////        Stream<UserDto> users = userService.getAllUsers();
-////        users.forEach(user -> {
-////            System.out.printf(user.toString());
-////            userDetailsManager.createUser(
-////                    User.withDefaultPasswordEncoder()
-////                            .username(user.username())
-////                            .password(user.password())
-////                            .roles(String.valueOf(user.role()))
-////                            .build()
-////            );
-////        });
-////        return userDetailsManager;
+//        Stream<UserDto> users = userService.getAllUsers();
+//        users.forEach(user -> {
+//            System.out.printf(user.toString());
+//            userDetailsManager.createUser(
+//                    User.withDefaultPasswordEncoder()
+//                            .username(user.username())
+//                            .password(user.password())
+//                            .roles(String.valueOf(user.role()))
+//                            .build()
+//            );
+//        });
+//        return userDetailsManager;
 //
 //        userDetailsManager.createUser(
 //                User.withDefaultPasswordEncoder()

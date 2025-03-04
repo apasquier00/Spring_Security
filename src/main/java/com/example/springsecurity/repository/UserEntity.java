@@ -4,6 +4,8 @@ import com.example.springsecurity.dto.UserRole;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.UUID;
 
@@ -18,8 +20,11 @@ public class UserEntity {
         this.role = role;
     }
     @Id
-    private @NotNull String userName;
+    private
+    @NotNull @Size(min = 2, max = 10, message = "Le nom doit comporter entre 2 et 10 charactères")
+    String userName;
     private @NotNull String password;
+
     private @NotNull UserRole role;
 
 

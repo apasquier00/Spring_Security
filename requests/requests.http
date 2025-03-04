@@ -2,16 +2,15 @@
 @url=http://localhost:8080
 @game_id=b5daf912-34eb-4f2b-9109-33af159cd8c6
 @player_id=9f65e646-4607-4998-aee2-8ffb8931ea02
-@token=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2UiLCJpYXQiOjE3NDEwOTMyNTIsImV4cCI6MTc0MTA5Njg1Mn0.IMnh3SKN6-l2lO8UtiRSFjaiput3CINlHacv_huCUm4
-
+@token=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2UiLCJpYXQiOjE3NDEwOTYyMjEsImV4cCI6MTc0MTA5OTgyMX0.6Gw_HHJjMU1P3trY_xGVdmXzfw83itpbuGSEHYhjiu8
 
 ### POST auth signup
 POST {{url}}/auth/signup
 Content-Type: application/json
 
 {
-  "username": "alex",
-  "password": "yoyoyo"
+  "username": "bingo",
+  "password": "f"
 }
 
 ### POST auth login

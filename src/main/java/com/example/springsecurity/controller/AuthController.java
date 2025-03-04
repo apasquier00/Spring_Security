@@ -3,6 +3,7 @@ package com.example.springsecurity.controller;
 import com.example.springsecurity.dto.*;
 import com.example.springsecurity.service.UserService;
 import com.example.springsecurity.util.JwtUtil;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -31,7 +32,10 @@ public class AuthController {
 
 
     @PostMapping("/signup")
-    public String signup(@RequestBody NewUserDto userDto) {
+    public String signup(@RequestBody @Valid NewUserDto userDto) {
+        if (userDto.password().length() < 4 || userDto.password().length() > 20) {
+            throw new IllegalArgumentException("Le mot de passe doit comporter entre 4 et 20 caractères");
+        }
         UserDto encoded = new UserDto(userDto.username(),
                 passwordEncoder.encode(userDto.password()), UserRole.USER);
         userService.addUser(encoded);
